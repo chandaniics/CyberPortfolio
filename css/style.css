@@ -73,6 +73,9 @@ html{
 
 .hero-image{
     position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .hero-image::before{
@@ -82,7 +85,7 @@ html{
     height:220px;
     background:#00d9ff;
     border-radius:50%;
-    filter:blur(120px);
+    filter:blur(100px);
     opacity:0.15;
     z-index:-1;
 }
@@ -92,11 +95,8 @@ html{
     height:220px;
     object-fit:cover;
     border-radius:24px;
-
     border:2px solid rgba(0,217,255,0.3);
-
-    box-shadow:
-    0 0 40px rgba(0,217,255,0.15);
+    box-shadow:0 0 40px rgba(0,217,255,0.15);
 }
 
 /* CONTENT */
@@ -598,16 +598,16 @@ footer{
         flex-direction:column;
         text-align:center;
         padding:180px 10% 80px;
-        gap:50px;
+        gap:40px;
     }
 
     .hero-image img{
-        width: 180px;px;
+        width: 180px;
         height:180px;
     }
 
     .hero-image::before{
-        width: 180px;0px;
+        width: 180px;
         height:180px;
     }
 
