@@ -19,15 +19,54 @@ html{
     scroll-behavior:smooth;
 }
 
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(15px);
+    background:rgba(11,15,23,0.7);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.2rem;
+    font-weight:700;
+    color:#00d9ff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#e5e7eb;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#00d9ff;
+}
+
 /* HERO */
 
 .hero{
-    min-height:75vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     gap:100px;
-    padding:0 10%;
+    padding:120px 10% 80px;
 }
 
 /* IMAGE */
@@ -39,8 +78,8 @@ html{
 .hero-image::before{
     content:'';
     position:absolute;
-    width:280px;
-    height:280px;
+    width:220px;
+    height:220px;
     background:#00d9ff;
     border-radius:50%;
     filter:blur(120px);
@@ -49,8 +88,8 @@ html{
 }
 
 .hero-image img{
-    width:280px;
-    height:280px;
+    width:220px;
+    height:220px;
     object-fit:cover;
     border-radius:24px;
 
@@ -184,7 +223,12 @@ html{
 /* SECTIONS */
 
 .about,
-.skills{
+.skills,
+.projects,
+.education,
+.experience,
+.leadership,
+.contact{
     padding:80px 10%;
 }
 
@@ -221,6 +265,7 @@ html{
 .about-card:hover{
     transform:translateY(-5px);
     border-color:rgba(0,217,255,0.3);
+    box-shadow:0 0 25px rgba(0,217,255,0.12);
 }
 
 .about-card h3{
@@ -256,13 +301,11 @@ html{
     transform:translateY(-5px);
     border-color:#00d9ff;
     color:#00d9ff;
+    box-shadow:0 0 25px rgba(0,217,255,0.12);
 }
 
 /* PROJECTS */
 
-.projects{
-    padding:80px 10%;
-}
 
 .projects-grid{
     display:grid;
@@ -286,6 +329,7 @@ html{
     transform:translateY(-6px);
 
     border-color:#00d9ff;
+    box-shadow:0 0 25px rgba(0,217,255,0.12);
 }
 
 .project-content{
@@ -383,12 +427,6 @@ html{
 
 /* EDUCATION */
 
-.education,
-.leadership,
-.contact{
-    padding:80px 10%;
-}
-
 .education-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -423,10 +461,6 @@ html{
 }
 
 /* EXPERIENCE */
-
-.experience{
-    padding:80px 10%;
-}
 
 .experience-card{
 
@@ -479,6 +513,7 @@ html{
 .leadership-card:hover{
     transform:translateY(-5px);
     border-color:#00d9ff;
+    box-shadow:0 0 25px rgba(0,217,255,0.12);
 }
 
 .leadership-card h3{
@@ -567,13 +602,13 @@ footer{
     }
 
     .hero-image img{
-        width:250px;
-        height:250px;
+        width:200px;
+        height:200px;
     }
 
     .hero-image::before{
-        width:250px;
-        height:250px;
+        width: 20px;0px;
+        height:200px;
     }
 
     .hero-content h1{
@@ -588,19 +623,33 @@ footer{
         justify-content:center;
     }
 
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
     .contact-container{
     grid-template-columns:1fr;
-}
+    }
 
-.leadership-grid{
-    grid-template-columns:1fr;
-}
+    .leadership-grid{
+        grid-template-columns:1fr;
+    }
 
-.about-content{
-    grid-template-columns:1fr;
-}
-.education-grid{
-    grid-template-columns:1fr;
-}
+    .about-content{
+        grid-template-columns:1fr;
+    }
+    .education-grid{
+        grid-template-columns:1fr;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
 
 }
